@@ -13,9 +13,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources','views'));
 
-
-route(app);
 db.connect();
+route(app);
+
 
 app.listen(port, () => {
   console.log(`Example app listening at  http://localhost:${port}`)
